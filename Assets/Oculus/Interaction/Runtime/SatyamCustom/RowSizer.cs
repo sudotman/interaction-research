@@ -162,6 +162,13 @@ public class RowSizer : MonoBehaviour
 
     public void FinishedCurrentInteractable(GameObject obj)
     {
+
+
+        researchManager.Invoke("ResetAndRestart", 1f);
+
+        if (tutorialMode)
+            return;
+
         researchManager.PlaySond(1);
 
         foreach (InteractableColorVisual colorVisual in obj.GetComponentsInChildren<InteractableColorVisual>())
@@ -169,8 +176,7 @@ public class RowSizer : MonoBehaviour
             Debug.LogError("Reaching Green");
             colorVisual.FlashGreen();
         }
-
-        researchManager.Invoke("ResetAndRestart", 1f);
+    
         //researchManager.StartCoroutine("ResetAllQualities");
     }
 

@@ -65,13 +65,20 @@ public class InteractableIndividual : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentlyActive || rowSizer.tutorialMode)
+        bool temp;
+        if (rowSizer != null)
+            temp = rowSizer.tutorialMode;
+        else
+            temp = false;
+
+        if (currentlyActive || temp)
         {
             if (typeOfInteractable == InteractableType.Grab)
             {
                 if (Mathf.Abs(initialRot.z - mainInteractable.localRotation.z) > 0.525f)
                 {
                     Debug.LogError("Finished");
+                    audioWhileMove.Stop();
                     if (didOnceForUpdate == false)
                     {
                         didOnceForUpdate = true;

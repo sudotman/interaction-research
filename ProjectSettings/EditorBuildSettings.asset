@@ -4,7 +4,58 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TransientScene.unity
+    guid: 91cfbfb390fceeb4b9ad11d0967bf7d2
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 61a41d66f27de2f43bb939e93ac9f3ef
+  - enabled: 1
+    path: Assets/Scenes/GrabPracticeHands.unity
+    guid: 5998fb0d01f8a9f4b92ea9d00dad4669
+  - enabled: 1
+    path: Assets/Scenes/GrabPracticeController.unity
+    guid: 8333611b0abef154a9186b8f0bc96ee3
+  - enabled: 1
+    path: Assets/Scenes/GrabHandsShowingContr.unity
+    guid: 9a8e14f60aeb5054f8df38248e518fde
+  - enabled: 1
+    path: Assets/Scenes/GrabControllerShowing.unity
+    guid: a861050e09bac2b45843f056f8ded916
+  - enabled: 1
+    path: Assets/Scenes/GrabHandsShowing.unity
+    guid: 8d9fe6501bb1ab648bb24bd3a2694172
+  - enabled: 1
+    path: Assets/Scenes/PokePracticeHands.unity
+    guid: cc84d8fe5983d91478f806f2a1e9fd25
+  - enabled: 1
+    path: Assets/Scenes/PokePracticeController.unity
+    guid: ea92c9bc474c7ad4b90035f5a385fa47
+  - enabled: 1
+    path: Assets/Scenes/PokeControllerShowingHands.unity
+    guid: 3ac8ccc730d9bcb40ada4c18b855e4f0
+  - enabled: 1
+    path: Assets/Scenes/PokeControllerShowingController.unity
+    guid: b4c7c18df41ccf94797c0ee5d0253e4c
+  - enabled: 1
+    path: Assets/Scenes/PokeHandShowing.unity
+    guid: 387ec9415d0924e40a8dfe1899ab387e
+  - enabled: 1
+    path: Assets/Scenes/PinchPracticeHands.unity
+    guid: f2a510bedfee52b4fb1aef37733c4303
+  - enabled: 1
+    path: Assets/Scenes/PinchPracticeController.unity
+    guid: 6c1a498d5052327448b4ac4e564d3c78
+  - enabled: 1
+    path: Assets/Scenes/PinchControllerHandShowing.unity
+    guid: d33d0a1e14329e74bb20d8a6a0324256
+  - enabled: 1
+    path: Assets/Scenes/PinchControllerShowingController.unity
+    guid: 470e6eaacc1e60746ab7f540096f58dc
+  - enabled: 1
+    path: Assets/Scenes/PinchHandShowing.unity
+    guid: fa270847719abb64399f8326b0bfc67d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2c36bb42016cf5e4897542017c4dde53, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f5d034b01abc7454fb82209f7265c703, type: 2}

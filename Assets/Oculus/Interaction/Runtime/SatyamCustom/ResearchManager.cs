@@ -39,6 +39,8 @@ public class ResearchManager : MonoBehaviour
     [SerializeField]
     private GameObject[] endGameDisablers;
 
+    bool tutorialModeCachedFromRowSizer;
+
     int correctAttempts = 0;
     int incorrectAttempts = 0;
 
@@ -47,11 +49,22 @@ public class ResearchManager : MonoBehaviour
     {
         Initialize();
         rowSizer.researchManager = this;
+        tutorialModeCachedFromRowSizer = rowSizer.tutorialMode;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (tutorialModeCachedFromRowSizer)
+        {
+            if (internalCanStartResearch)
+            {
+                internalCanStartResearch = false;
+                StartResearch();
+            }
+            return;
+        }    
+
         currentTime += Time.deltaTime;
 
         if (internalDoNow)
@@ -62,7 +75,10 @@ public class ResearchManager : MonoBehaviour
             if(!( (30 - currentTime) > 0.0f))
             {
                 internalDoNow = false;
-                internalCanStartResearch = false;   
+                internalCanStartResearch = false;
+
+                if (tutorialModeCachedFromRowSizer)
+                    return;
 
                 for (int i = 0; i<transform.childCount; i++)
                 {
@@ -78,6 +94,7 @@ public class ResearchManager : MonoBehaviour
 
                 endGame.transform.GetChild(endGame.transform.childCount-1).GetComponentInChildren<TextMeshPro>().text = "Highest Streak: " + currentStreak + "\n" + "Correctly Done: " + correctAttempts + "\n" + "Incorrectly Done: " + incorrectAttempts;
 
+                PersistentSceneManager.instance.WriteInformation("Highest Streak: " + currentStreak + " Correctly Done: " + correctAttempts + " Incorrectly Done: " + incorrectAttempts);
             }
         }
         else if (internalCanStartResearch)

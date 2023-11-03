@@ -27977,6 +27977,7 @@ GameObject:
   - component: {fileID: 585231194}
   - component: {fileID: 585231196}
   - component: {fileID: 585231195}
+  - component: {fileID: 585231197}
   m_Layer: 0
   m_Name: RowHolder
   m_TagString: Untagged
@@ -28043,6 +28044,7 @@ MonoBehaviour:
   allowPrefabRot: 1
   interactablePrefab: {fileID: 2374018163122959062, guid: 21485acd5b687d14a8669600fc784e8a, type: 3}
   researchManager: {fileID: 0}
+  tutorialMode: 0
   flash: 0
   resetAll: 0
 --- !u!114 &585231194
@@ -28257,6 +28259,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &585231197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585231191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9934e1fe91ce6246bc5d27934aa09f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_handedness: 1
 --- !u!1 &586139190
 GameObject:
   m_ObjectHideFlags: 0
