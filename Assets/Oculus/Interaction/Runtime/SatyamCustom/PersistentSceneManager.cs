@@ -176,6 +176,7 @@ public class PersistentSceneManager : MonoBehaviour
         LoadScene(cachedSceneIndex);
     }
 
+
     /// <summary>
     /// Include an index for the scene to be loaded after unloading current if required - leave it to 0 if no scene is to be loaded after unloading
     /// </summary>
